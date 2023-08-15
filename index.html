@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" async></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <script src="index.js"></script>
+    <div class="wrapper">
+      <div class="wrapper_container">
+        <p>Welcome to</p>
+        <h1>THE CAT WHISPERER</h1>
+        <div class="container content">
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInputDisabled"
+              placeholder="name@example.com"
+              disabled
+            />
+            <label for="floatingInputDisabled">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="floatingTextareaDisabled"
+              disabled
+            ></textarea>
+            <label for="floatingTextareaDisabled">Comments</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="floatingTextarea2Disabled"
+              style="height: 100px"
+              disabled
+            >
+Disabled textarea with some text inside</textarea
+            >
+            
+          </div>
+
+
+          <footer>
+            <p>
+              &copy; 2023 Millionpainter | Phil Splash. All rights reserved.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
