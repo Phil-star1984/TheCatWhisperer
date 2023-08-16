@@ -1,50 +1,6 @@
-/* Greeting to User */
-/* console.log("Hello this is the CAT-WHISPERER!");
-console.log("Let's play!"); */
+import moodLifter from "./data.js";
 
-/* Array for options to uplift your cat */
-const moodLifter = [
-  {
-    mood: "cool",
-    solutions: [
-      "go for a walk and do it right away!",
-      "listen to her favorite music",
-      "talk to a cat-friend",
-    ],
-  },
-  {
-    mood: "so-so",
-    solutions: [
-      "play with the cat-stick, of course!",
-      "watch a movie she loves",
-      "try a new hobby",
-    ],
-  },
-  {
-    mood: "shit",
-    solutions: [
-      "eat some nice cat-food, you idiot!",
-      "take a deep breath and count to ten",
-      "write down her thoughts",
-    ],
-  },
-  {
-    mood: "curious",
-    solutions: [
-      "explore a cardboard box maze",
-      "investigate a mysterious sound",
-      "climb to a high perch and observe",
-    ],
-  },
-  {
-    mood: "happy",
-    solutions: [
-      "dance around like a crazy cat",
-      "chase a laser pointer",
-      "nap in a sunny spot",
-    ],
-  },
-];
+console.log(moodlifter.mood);
 
 const sendMoodButton = document.getElementById("send_mood");
 
@@ -57,7 +13,7 @@ function upliftCat() {
     "How is your cat today? (Choose: “cool”, “so-so”, “shit”)"
   ); */
 
-  const catMood = document.getElementById("floatingInputDisabled").value;
+  let catMood = document.getElementById("floatingInputDisabled").value;
 
   /* check the mood of the cat and give solution */
   const moodCheck = moodLifter.filter((item) => {
@@ -69,6 +25,8 @@ function upliftCat() {
   ).innerHTML = `The status of your cat is ${catMood.toUpperCase()}. Possible Solutions: ${moodCheck[0].solutions[
     x
   ].toUpperCase()}`;
+
+  catMood = "";
 
   /*   switch (mood) {
     case "shit":
