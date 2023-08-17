@@ -25,15 +25,34 @@ body {
 
 .wrapper_container {
   padding: 20px;
+  padding-bottom: 8px;
   background-color: blueviolet;
   border-radius: 15px;
-  width: 50%;
+  width: 40%;
   max-width: 600px;
   min-width: 450px;
 }
 
 .container.content {
-  width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+form {
+  width: 65%;
+}
+
+.container_output {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 15px;
+}
+
+h1#mood_output {
+  margin: 0;
 }
 
 .wrapper_container h1 {

@@ -20,7 +20,7 @@
         <p>Welcome to</p>
         <h1>THE CAT WHISPERER</h1>
         <div class="container content">
-          <div class="form-floating mb-3">
+          <form class="form-floating mb-3">
             <label for="floatingInputDisabled"
               >How is your Cat's mood today?</label
             >
@@ -35,28 +35,17 @@
             <button id="send_mood" type="button" class="btn btn-warning">
               Submit
             </button>
+          </form>
+          <div class="container_output">
+            <h1 id="mood_output">Uplift Your Cat!</h1>
           </div>
-          <h1 id="mood_output">Uplift Your Cat!</h1>
-          <!-- 
-          <div class="form-floating mb-3">
-            <label for="floatingTextarea2Disabled">Possible Solutions</label>
-            <textarea
-              class="form-control"
-              placeholder="Leave a comment here"
-              id="floatingTextarea2Disabled"
-              style="height: 100px"
-              
-            >
-Disabled textarea with some text inside</textarea
-            >
-          </div>
- -->
-          <footer>
-            <p>
-              &copy; 2023 Millionpainter | Phil Splash. All rights reserved.
-            </p>
-          </footer>
         </div>
+        <footer>
+          <p><span>&copy; 2023 Millionpainter | Phil Splash. All rights reserved.</p>
+            <button id="test" type="button" class="btn btn-warning">
+              Change Backgound
+            </button>
+        </footer>
       </div>
     </div>
   </body>

@@ -1,6 +1,7 @@
 import moodLifter from "./data.js";
 
-console.log(moodlifter.mood);
+/* console.log(moodLifter[0].solutions[0]); */
+
 
 const sendMoodButton = document.getElementById("send_mood");
 
@@ -66,3 +67,16 @@ function upliftCat() {
       alert("ERROR. This is no mood");
   } */
 }
+
+const testButton = document.getElementById("test");
+testButton.addEventListener("click", changeBgImg);
+/* setInterval(changeBgImg(), 1000); */
+
+function changeBgImg() {
+  document.body.style.backgroundImage = "url(images/AdobeStock_479388341.jpg)";
+  
+};
+
+/* window.addEventListener("load", () => {
+  document.body.style.backgroundimage = "url(images/AdobeStock_479388341.jpg)";
+}); */
