@@ -2,25 +2,20 @@ import moodLifter from "./data.js";
 
 /* console.log(moodLifter[0].solutions[0]); */
 
-
 const sendMoodButton = document.getElementById("send_mood");
 
-sendMoodButton.addEventListener("click", upliftCat);
-
-/* create Function to give solutions for different moods/cases */
+/* create Function to give solutions for different moods */
 function upliftCat() {
-  /* query for the mood of the cat */
-  /*  const catMood = prompt(
-    "How is your cat today? (Choose: “cool”, “so-so”, “shit”)"
-  ); */
-
-  let catMood = document.getElementById("floatingInputDisabled").value;
+  /* muss die catMood Variable außerhalb der Funtion oder innerhalb sein? */
+  let catMood = document.getElementById("cat_mood_input").value;
 
   /* check the mood of the cat and give solution */
   const moodCheck = moodLifter.filter((item) => {
     return item.mood === catMood;
   });
+
   const x = Math.floor(Math.random() * 3);
+
   document.getElementById(
     "mood_output"
   ).innerHTML = `The status of your cat is ${catMood.toUpperCase()}. Possible Solutions: ${moodCheck[0].solutions[
@@ -28,54 +23,21 @@ function upliftCat() {
   ].toUpperCase()}`;
 
   catMood = "";
-
-  /*   switch (mood) {
-    case "shit":
-      const moodMatching = moodLifter.filter((item) => {
-        return item.mood === "shit";
-      });
-      const x = Math.floor(Math.random() * 3);
-      alert(
-        `The status of your cat is ${mood.toUpperCase()}. Possible Solutions: ${moodMatching[0].solutions[
-          x
-        ].toUpperCase()}`
-      );
-      break;
-    case "so-so":
-      const moodMatching = moodLifter.filter((item) => {
-        return item.mood === "so-so";
-      });
-      const x = Math.floor(Math.random() * 3);
-      alert(
-        `The status of your cat is ${mood.toUpperCase()}. Possible Solutions: ${moodMatching[0].solutions[
-          x
-        ].toUpperCase()}`
-      );
-      break;
-    case "cool":
-      const moodMatching = moodLifter.filter((item) => {
-        return item.mood === "cool";
-      });
-      const x = Math.floor(Math.random() * 3);
-      alert(
-        `The status of your cat is ${mood.toUpperCase()}. Possible Solutions: ${moodMatching[0].solutions[
-          x
-        ].toUpperCase()}`
-      );
-      break;
-    default:
-      alert("ERROR. This is no mood");
-  } */
 }
-
-const testButton = document.getElementById("test");
-testButton.addEventListener("click", changeBgImg);
-/* setInterval(changeBgImg(), 1000); */
 
 function changeBgImg() {
   document.body.style.backgroundImage = "url(images/AdobeStock_479388341.jpg)";
-  
-};
+}
+
+function buttonKlick() {
+  upliftCat();
+  changeBgImg();
+}
+
+const changeBckgrd = document.getElementById("change_bckgrd");
+changeBckgrd.addEventListener("click", changeBgImg);
+/* setInterval(changeBgImg(), 1000); */
+sendMoodButton.addEventListener("click", buttonKlick);
 
 /* window.addEventListener("load", () => {
   document.body.style.backgroundimage = "url(images/AdobeStock_479388341.jpg)";
